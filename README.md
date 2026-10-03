@@ -25,6 +25,8 @@ The work includes byte-exact PCM evidence, paired policy comparisons, capacity b
 | Baseline demonstration | **28 scenarios / 56 paired replays** |
 | Isolated replay-control verification | **8 checks passed** |
 
+**Hosted validation:** the [initial release passed GitHub Actions](https://github.com/RHUDHRESH/sih-voice-validation/actions/runs/37095307635), including Python validation, independent PCM audits, JavaScript controls and the reduced study.
+
 All 1,402 study runs matched their predeclared software expectations, including deliberate aborts. A passing failure-handling test is distinct from successful command delivery. The full study ran the 27-test suite; three archive/restore tests were subsequently added to the final 30-test suite.
 
 ## The golden no-pause result
