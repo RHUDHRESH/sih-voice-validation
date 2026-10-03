@@ -1,0 +1,3 @@
+# No third-party runtime or test dependencies.
+# Tested interpreter: CPython 3.12.14 (see each run's manifest.json).
+# All imports use the Python standard library and this source tree.

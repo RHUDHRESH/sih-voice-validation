@@ -1,0 +1,4 @@
+at_sample,session_id,seq,first_sample_index,sample_count,sha256,disposition,evidence_label
+19601,mute_during_capture:naive:1,0,19200,1,50fc0cf5af5b5a51d9093d94eb851b22e622d4b8d29cecdc9d767c166a4fa350,ACCEPTED,simulated
+20001,mute_during_capture:naive:1,1,19201,320,48c4232be328e48507257496fdc810dd200eab49e2079ede616ce4c31b011835,ACCEPTED,simulated
+20401,mute_during_capture:naive:1,2,19521,320,79258ccdc0a2e25414cf003fc5d176c7edb091969c72f26df3c70ec41c43b7fb,REJECT_CLOSED_SESSION,simulated

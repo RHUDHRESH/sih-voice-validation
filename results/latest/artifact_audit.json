@@ -1,0 +1,8 @@
+{
+  "accepted_packets_audited": 2673,
+  "evidence_label": "simulated-artifact-audit",
+  "method": "independent serialized PCM/chunk/summary verification; no simulator imported",
+  "receiver_sessions_audited": 49,
+  "replays_audited": 56,
+  "status": "pass"
+}

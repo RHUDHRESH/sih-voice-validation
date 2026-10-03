@@ -1,0 +1,3 @@
+at_sample,event,session_id,detail,evidence_label
+1200,ORACLE_TRIGGER,insufficient_startup_history:buffered:1,requested_start=-800; keyword_end=800,simulated
+1200,ABORT,insufficient_startup_history:buffered:1,CAPTURE_START_NOT_RETAINED,simulated

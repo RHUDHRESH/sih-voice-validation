@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+.playwright-cli/
+output/playwright/
+.env
+.env.*
+CLAUDE.md
+claude.md
+results/windows_baseline/
+results/clean_reproduction/
+results/ci*/
+results/study_*/fixtures/
+results/study_*/runs/
+results/study_*/viewer_bundle.json
+docs/images/
+results/latest/viewer_bundle.json

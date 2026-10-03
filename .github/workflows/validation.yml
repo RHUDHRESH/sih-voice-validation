@@ -1,0 +1,23 @@
+name: Voice capture validation
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  software-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python -I -S run_validation.py --out /tmp/voice-results
+      - run: python -I -S verify_artifacts.py /tmp/voice-results
+      - run: node --check viewer/app.js
+      - name: Check replay control logic
+        run: |
+          python -c 'import json; from pathlib import Path; from serve_viewer import bundle; Path("/tmp/voice-bundle.json").write_text(json.dumps(bundle(Path("/tmp/voice-results"))))'
+          node tests/test_viewer_controls.js /tmp/voice-bundle.json
+      - run: python -I -S study.py --quick --trials 2 --out /tmp/voice-study

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="180" viewBox="0 0 1120 180" role="img">
+<title>Golden fixture unavailable</title>
+<desc>This configuration contains no paired golden_no_pause fixture. No golden result is plotted.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="32" y="35" font-size="12" fill="#526173" text-anchor="start" font-weight="bold">SIMULATED · ORACLE TRIGGERS · NO KWS / ASR / HARDWARE MEASUREMENT</text>
+<text x="32" y="70" font-size="26" fill="#14213d" text-anchor="start" font-weight="bold">Golden fixture unavailable</text>
+<text x="32" y="100" font-size="14" fill="#526173" text-anchor="start" font-weight="normal">This configuration contains no paired golden_no_pause fixture. No golden result is plotted.</text>
+</g>
+</svg>

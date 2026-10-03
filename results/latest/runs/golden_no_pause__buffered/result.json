@@ -1,0 +1,72 @@
+{
+  "closed_session_packets_rejected": 0,
+  "command_integrity_status": "pass",
+  "commands": [
+    {
+      "command_integrity_status": "pass",
+      "command_samples": 16000,
+      "command_samples_missing": 0,
+      "command_samples_received": 16000,
+      "ground_truth_end": 32000,
+      "ground_truth_start": 16000,
+      "onset_lost_ms": 0.0,
+      "onset_lost_samples": 0,
+      "onset_retained": true,
+      "received_end": 32000,
+      "received_start": 14400,
+      "receiver_bytes_match_source": true,
+      "selected_session_id": "golden_no_pause:buffered:1",
+      "utterance_id": "command_1"
+    }
+  ],
+  "configured_packet_payload_bound_bytes": 640,
+  "detector": "oracle_events_no_kws_model",
+  "duplicate_packets_ignored": 0,
+  "endpoint": "oracle_endpoint_no_vad",
+  "evidence_label": "simulated",
+  "expected_behavior_checks": [
+    {
+      "actual": "complete",
+      "expected": "complete",
+      "field": "handoff_status",
+      "status": "pass"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "field": "onset_lost_samples",
+      "status": "pass"
+    }
+  ],
+  "handoff_status": "complete",
+  "host_runtime_seconds": 0.09820000000763685,
+  "input_sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e",
+  "maximum_packet_payload_bytes": 640,
+  "mute_clear_verified": true,
+  "policy": "buffered",
+  "reason": "",
+  "receiver_accepted_samples": 17600,
+  "ring_capacity_samples": 16000,
+  "ring_high_water_samples": 16000,
+  "ring_pcm_payload_bytes": 32000,
+  "scenario_id": "golden_no_pause",
+  "session_count": 1,
+  "sessions": [
+    {
+      "accepted_at": 24000,
+      "capture_end": 32000,
+      "cursor": 32000,
+      "finished_at": 32641,
+      "next_send_at": 32800,
+      "reason": "",
+      "requested_at": 19200,
+      "requested_start": 14400,
+      "seq": 55,
+      "session_id": "golden_no_pause:buffered:1",
+      "state": "COMPLETE",
+      "utterance_id": "command_1"
+    }
+  ],
+  "test_status": "pass",
+  "wire_samples_including_retries": 17600
+}

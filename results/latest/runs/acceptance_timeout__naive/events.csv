@@ -1,0 +1,4 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,acceptance_timeout:naive:1,requested_start=19200; keyword_end=16000,simulated
+32000,ORACLE_ENDPOINT,acceptance_timeout:naive:1,capture_end=32000,simulated
+64000,ABORT,acceptance_timeout:naive:1,SIMULATION_TIMEOUT,simulated

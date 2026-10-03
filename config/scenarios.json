@@ -1,0 +1,1553 @@
+{
+  "schema_version": "1.0",
+  "evidence_label": "simulated",
+  "evaluation_stage": "exploratory_development",
+  "detector": "oracle_events_no_trained_model",
+  "endpoint": "oracle_no_vad",
+  "seed": 26172,
+  "sample_format": "16000_Hz_mono_signed_16bit_little_endian",
+  "scenarios": [
+    {
+      "scenario_id": "golden_no_pause",
+      "description": "Oracle decision 200 ms after wake endpoint; receiver accepts after a further 300 ms.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 4800,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete",
+          "onset_lost_samples": 3200
+        },
+        "buffered": {
+          "handoff_status": "complete",
+          "onset_lost_samples": 0
+        }
+      }
+    },
+    {
+      "scenario_id": "pause_300ms",
+      "description": "A 300 ms pause makes the 200 ms decision early enough for both capture policies.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 20800,
+          "command_end": 36800
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "zero_detector_delay",
+      "description": "Oracle trigger exactly at the keyword endpoint.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 16000,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 16000
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "detector_delay_500ms",
+      "description": "Half-second oracle decision delay; fixed guard still fits the ring.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 24000,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 24000
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "detector_delay_exceeds_ring",
+      "description": "Required pre-trigger history is already gone at the oracle event.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 48000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 32000,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 32000
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "acceptance_capacity_exact",
+      "description": "Acceptance at precisely the oldest retained requested sample; fast sink then catches up.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 11200,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "acceptance_capacity_plus_one",
+      "description": "One additional sample of acceptance delay exceeds ring retention; no clamping.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 11201,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "slow_sink_overflow",
+      "description": "Sink can consume only half of the source rate during a four-second command.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 80000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 160,
+      "packet_interval_samples": 320,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "one_dropped_packet",
+      "description": "One simulated packet drop is retried from retained data.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [
+        2
+      ],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "duplicate_packets",
+      "description": "Exact duplicate chunks are acknowledged once and never appended twice.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [
+        2,
+        3
+      ],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "all_packets_dropped",
+      "description": "Persistent transport loss must end in explicit bounded failure.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": true,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "disconnect_aborts",
+      "description": "Connection loss cancels the session, even if a prefix was received.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [
+        [
+          20800,
+          24000
+        ]
+      ],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "reconnect_session_isolation",
+      "description": "A new trigger after reconnect creates a new session; an old in-flight packet is rejected.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        },
+        {
+          "at": 19840,
+          "event_id": "trigger_2",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19840
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 1600,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 800,
+      "outages": [
+        [
+          19360,
+          19840
+        ]
+      ],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "repeated_and_busy_triggers",
+      "description": "Repeated event ids and a fresh trigger while busy do not fork capture sessions.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        },
+        {
+          "at": 19360,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        },
+        {
+          "at": 19680,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        },
+        {
+          "at": 19840,
+          "event_id": "trigger_busy",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19840
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "stale_trigger",
+      "description": "An event older than the configured maximum age is rejected before session creation.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 20801,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "rejected"
+        },
+        "buffered": {
+          "handoff_status": "rejected"
+        }
+      }
+    },
+    {
+      "scenario_id": "future_trigger",
+      "description": "An impossible future detector timestamp is rejected.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19201
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "rejected"
+        },
+        "buffered": {
+          "handoff_status": "rejected"
+        }
+      }
+    },
+    {
+      "scenario_id": "mute_during_capture",
+      "description": "Mute zeroes the ring and aborts the stream; no subsequent sends or new capture.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 400,
+      "outages": [],
+      "mute_events": [
+        [
+          20160,
+          true
+        ]
+      ],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "mute_then_fresh_session",
+      "description": "After unmute, only a new session can capture the second oracle-labelled utterance.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        },
+        {
+          "utterance_id": "command_2",
+          "keyword_end": 38400,
+          "command_start": 38400,
+          "command_end": 48000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        },
+        {
+          "at": 40000,
+          "event_id": "trigger_2",
+          "utterance_id": "command_2",
+          "keyword_end": 38400,
+          "detected_at": 40000
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [
+        [
+          20800,
+          true
+        ],
+        [
+          35200,
+          false
+        ]
+      ],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "long_idle_ring_wrap",
+      "description": "Ring has wrapped several times before detection; absolute indices remain correct.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 64000,
+          "command_start": 64000,
+          "command_end": 80000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 67200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 64000,
+          "detected_at": 67200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "corrupted_packet",
+      "description": "An in-transit payload-bit corruption fails the packet checksum and aborts.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [
+        2
+      ],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "reordered_metadata",
+      "description": "A wrong first-sample index is rejected rather than silently concatenated.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [
+        2
+      ],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "insufficient_startup_history",
+      "description": "Guard requests samples before startup, which must not be silently clamped to zero.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 800,
+          "command_start": 800,
+          "command_end": 8800
+        }
+      ],
+      "triggers": [
+        {
+          "at": 1200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 800,
+          "detected_at": 1200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "acceptance_timeout",
+      "description": "No acceptance before the simulation deadline, with no need to overflow the ring first.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 64000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 100000,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "irregular_packet_sizes",
+      "description": "Identical capture range with seeded packet sizes 1 through 317.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 317,
+      "packet_interval_samples": 40,
+      "packet_sizes": [
+        132,
+        89,
+        178,
+        288,
+        101,
+        36,
+        223,
+        213,
+        230,
+        40,
+        226,
+        80,
+        58,
+        166,
+        107,
+        124,
+        225,
+        25,
+        186,
+        80,
+        217,
+        125,
+        1,
+        183,
+        253,
+        208,
+        287,
+        186,
+        31,
+        100,
+        88,
+        244,
+        102,
+        68,
+        11,
+        14,
+        208,
+        78,
+        283,
+        99,
+        44,
+        87,
+        151,
+        116,
+        208,
+        4,
+        245,
+        223,
+        275,
+        74,
+        175,
+        113,
+        305,
+        312,
+        176,
+        98,
+        219,
+        165,
+        218,
+        41,
+        317,
+        167,
+        66,
+        113,
+        291,
+        240,
+        53,
+        145,
+        90,
+        107,
+        5,
+        207,
+        8,
+        86,
+        169,
+        195,
+        270,
+        13,
+        186,
+        277,
+        209,
+        289,
+        214,
+        254,
+        298,
+        263,
+        309,
+        180,
+        69,
+        41,
+        134,
+        93,
+        203,
+        279,
+        158,
+        70,
+        244,
+        111,
+        129,
+        18,
+        314,
+        6,
+        269,
+        46,
+        230,
+        239,
+        77,
+        294,
+        25,
+        66,
+        48,
+        298,
+        296,
+        122,
+        159,
+        24,
+        152,
+        269,
+        12,
+        185,
+        204,
+        279,
+        272,
+        22,
+        59,
+        103,
+        129,
+        125
+      ],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "post_endpoint_slow_drain",
+      "description": "Acquisition continues after oracle endpoint; a slow drain cannot freeze ring retention.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 20000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 160,
+      "packet_interval_samples": 1600,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "mute_while_waiting_acceptance",
+      "description": "Mute cancels a pending request, zeroes PCM, and prevents any wire audio.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 4800,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [
+        [
+          20800,
+          true
+        ]
+      ],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    },
+    {
+      "scenario_id": "capacity_with_inflight_protection",
+      "description": "The copied in-flight chunk protects samples overwritten before its acknowledgement.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 11200,
+      "transport_delay_samples": 2,
+      "outages": [],
+      "mute_events": [],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "complete"
+        },
+        "buffered": {
+          "handoff_status": "complete"
+        }
+      }
+    },
+    {
+      "scenario_id": "old_trigger_after_unmute",
+      "description": "An old pre-mute trigger cannot restart capture after the privacy reset, even within the age limit.",
+      "utterances": [
+        {
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "command_start": 16000,
+          "command_end": 32000
+        }
+      ],
+      "triggers": [
+        {
+          "at": 19200,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        },
+        {
+          "at": 20160,
+          "event_id": "trigger_1",
+          "utterance_id": "command_1",
+          "keyword_end": 16000,
+          "detected_at": 19200
+        }
+      ],
+      "seed": 26172,
+      "sample_rate": 16000,
+      "ring_samples": 16000,
+      "guard_samples": 1600,
+      "packet_samples": 320,
+      "packet_interval_samples": 160,
+      "packet_sizes": [],
+      "accept_delay_samples": 0,
+      "transport_delay_samples": 0,
+      "outages": [],
+      "mute_events": [
+        [
+          19360,
+          true
+        ],
+        [
+          20000,
+          false
+        ]
+      ],
+      "drop_attempts": [],
+      "duplicate_attempts": [],
+      "corrupt_attempts": [],
+      "reorder_attempts": [],
+      "drop_all": false,
+      "max_trigger_age_samples": 1600,
+      "flush_timeout_samples": 32000,
+      "expected": {
+        "naive": {
+          "handoff_status": "aborted"
+        },
+        "buffered": {
+          "handoff_status": "aborted"
+        }
+      }
+    }
+  ]
+}

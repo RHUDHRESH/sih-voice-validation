@@ -1,0 +1,66 @@
+{
+  "closed_session_packets_rejected": 0,
+  "command_integrity_status": "fail",
+  "commands": [
+    {
+      "command_integrity_status": "fail",
+      "command_samples": 16000,
+      "command_samples_missing": 3200,
+      "command_samples_received": 12800,
+      "ground_truth_end": 32000,
+      "ground_truth_start": 16000,
+      "onset_lost_ms": 200.0,
+      "onset_lost_samples": 3200,
+      "onset_retained": false,
+      "received_end": 32000,
+      "received_start": 19200,
+      "receiver_bytes_match_source": true,
+      "selected_session_id": "acceptance_capacity_exact:naive:1",
+      "utterance_id": "command_1"
+    }
+  ],
+  "configured_packet_payload_bound_bytes": 640,
+  "detector": "oracle_events_no_kws_model",
+  "duplicate_packets_ignored": 0,
+  "endpoint": "oracle_endpoint_no_vad",
+  "evidence_label": "simulated",
+  "expected_behavior_checks": [
+    {
+      "actual": "complete",
+      "expected": "complete",
+      "field": "handoff_status",
+      "status": "pass"
+    }
+  ],
+  "handoff_status": "complete",
+  "host_runtime_seconds": 0.12849199993070215,
+  "input_sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e",
+  "maximum_packet_payload_bytes": 640,
+  "mute_clear_verified": true,
+  "policy": "naive",
+  "reason": "",
+  "receiver_accepted_samples": 12800,
+  "ring_capacity_samples": 16000,
+  "ring_high_water_samples": 16000,
+  "ring_pcm_payload_bytes": 32000,
+  "scenario_id": "acceptance_capacity_exact",
+  "session_count": 1,
+  "sessions": [
+    {
+      "accepted_at": 30400,
+      "capture_end": 32000,
+      "cursor": 32000,
+      "finished_at": 36641,
+      "next_send_at": 36800,
+      "reason": "",
+      "requested_at": 19200,
+      "requested_start": 19200,
+      "seq": 40,
+      "session_id": "acceptance_capacity_exact:naive:1",
+      "state": "COMPLETE",
+      "utterance_id": "command_1"
+    }
+  ],
+  "test_status": "pass",
+  "wire_samples_including_retries": 12800
+}

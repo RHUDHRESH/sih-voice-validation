@@ -1,0 +1,2 @@
+at_sample,event,session_id,detail,evidence_label
+20801,TRIGGER_REJECTED,,STALE_EVENT,simulated

@@ -1,0 +1,32 @@
+test_corrupt_serialized_pcm_rejected (test_artifact_audit.ArtifactAuditTests.test_corrupt_serialized_pcm_rejected) ... ok
+test_duplicate_scenario_policy_key_rejected (test_artifact_audit.ArtifactAuditTests.test_duplicate_scenario_policy_key_rejected) ... ok
+test_independent_golden_audit (test_artifact_audit.ArtifactAuditTests.test_independent_golden_audit) ... ok
+test_per_run_result_must_match_summary (test_artifact_audit.ArtifactAuditTests.test_per_run_result_must_match_summary) ... ok
+test_summary_cannot_redefine_ground_truth (test_artifact_audit.ArtifactAuditTests.test_summary_cannot_redefine_ground_truth) ... ok
+test_all_scenario_outcomes_and_invariants (test_harness.CaptureTests.test_all_scenario_outcomes_and_invariants) ... ok
+test_capacity_boundary_then_one_sample_failure (test_harness.CaptureTests.test_capacity_boundary_then_one_sample_failure) ... ok
+test_continuous_acquisition_after_endpoint (test_harness.CaptureTests.test_continuous_acquisition_after_endpoint) ... ok
+test_empty_receiver_is_not_onset_retention (test_harness.CaptureTests.test_empty_receiver_is_not_onset_retention) ... ok
+test_golden_exact_3200_vs_zero_and_paired_pcm (test_harness.CaptureTests.test_golden_exact_3200_vs_zero_and_paired_pcm) ... ok
+test_inflight_packet_protects_overwritten_ring_prefix (test_harness.CaptureTests.test_inflight_packet_protects_overwritten_ring_prefix) ... ok
+test_manifest_matches_generator (test_harness.CaptureTests.test_manifest_matches_generator) ... ok
+test_mute_before_acceptance (test_harness.CaptureTests.test_mute_before_acceptance) ... ok
+test_mute_no_new_capture_or_send_and_fresh_session (test_harness.CaptureTests.test_mute_no_new_capture_or_send_and_fresh_session) ... ok
+test_packet_boundaries_do_not_change_capture_range (test_harness.CaptureTests.test_packet_boundaries_do_not_change_capture_range) ... ok
+test_pcm_period_and_seed_reproducibility (test_harness.CaptureTests.test_pcm_period_and_seed_reproducibility) ... ok
+test_pre_reset_trigger_cannot_reactivate_capture (test_harness.CaptureTests.test_pre_reset_trigger_cannot_reactivate_capture) ... ok
+test_repeated_stale_and_future_triggers (test_harness.CaptureTests.test_repeated_stale_and_future_triggers) ... ok
+test_retries_duplicates_and_reconnect (test_harness.CaptureTests.test_retries_duplicates_and_reconnect) ... ok
+test_seeded_random_capture_properties (test_harness.CaptureTests.test_seeded_random_capture_properties) ... ok
+test_conflicting_duplicate_true_sequence_gap_and_timing (test_harness.ReceiverTests.test_conflicting_duplicate_true_sequence_gap_and_timing) ... ok
+test_duplicate_gap_corruption_and_closed_session (test_harness.ReceiverTests.test_duplicate_gap_corruption_and_closed_session) ... ok
+test_incomplete_receiver_cannot_claim_completion (test_harness.ReceiverTests.test_incomplete_receiver_cannot_claim_completion) ... ok
+test_every_wrap_offset_and_random_windows (test_harness.RingTests.test_every_wrap_offset_and_random_windows) ... ok
+test_exact_capacity_and_no_clamping (test_harness.RingTests.test_exact_capacity_and_no_clamping) ... ok
+test_fixed_storage_and_secure_clear (test_harness.RingTests.test_fixed_storage_and_secure_clear) ... ok
+test_noncontiguous_source_rejected (test_harness.RingTests.test_noncontiguous_source_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 7.673s
+
+OK

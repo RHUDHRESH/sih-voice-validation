@@ -1,0 +1,24 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,disconnect_aborts:naive:1,requested_start=19200; keyword_end=16000,simulated
+19200,ACCEPT,disconnect_aborts:naive:1,start=19200,simulated
+19201,SEND,disconnect_aborts:naive:1,seq=0; start=19200; count=1,simulated
+19202,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+19361,SEND,disconnect_aborts:naive:1,seq=1; start=19201; count=160,simulated
+19362,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+19521,SEND,disconnect_aborts:naive:1,seq=2; start=19361; count=160,simulated
+19522,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+19681,SEND,disconnect_aborts:naive:1,seq=3; start=19521; count=160,simulated
+19682,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+19841,SEND,disconnect_aborts:naive:1,seq=4; start=19681; count=160,simulated
+19842,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+20001,SEND,disconnect_aborts:naive:1,seq=5; start=19841; count=160,simulated
+20002,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+20161,SEND,disconnect_aborts:naive:1,seq=6; start=20001; count=160,simulated
+20162,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+20321,SEND,disconnect_aborts:naive:1,seq=7; start=20161; count=160,simulated
+20322,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+20481,SEND,disconnect_aborts:naive:1,seq=8; start=20321; count=160,simulated
+20482,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+20641,SEND,disconnect_aborts:naive:1,seq=9; start=20481; count=160,simulated
+20642,PACKET_DELIVERY,disconnect_aborts:naive:1,ACCEPTED,simulated
+20800,ABORT,disconnect_aborts:naive:1,NETWORK_DISCONNECTED,simulated

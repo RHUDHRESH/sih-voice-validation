@@ -1,0 +1,4 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,mute_while_waiting_acceptance:buffered:1,requested_start=14400; keyword_end=16000,simulated
+20800,ABORT,mute_while_waiting_acceptance:buffered:1,MUTED,simulated
+20800,MUTE,,ring zeroed; capture session cancelled,simulated

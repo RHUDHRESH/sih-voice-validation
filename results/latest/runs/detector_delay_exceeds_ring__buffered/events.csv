@@ -1,0 +1,3 @@
+at_sample,event,session_id,detail,evidence_label
+32000,ORACLE_TRIGGER,detector_delay_exceeds_ring:buffered:1,requested_start=14400; keyword_end=16000,simulated
+32000,ABORT,detector_delay_exceeds_ring:buffered:1,CAPTURE_START_NOT_RETAINED,simulated

@@ -1,0 +1,282 @@
+[
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\golden_no_pause.pcm",
+    "samples": 64000,
+    "scenario_id": "golden_no_pause",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\pause_300ms.pcm",
+    "samples": 68800,
+    "scenario_id": "pause_300ms",
+    "seed": 26172,
+    "sha256": "561e9682efefe28a065e5ada1e31242d2d53932409098011cfca3ac1ecaa0693"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\zero_detector_delay.pcm",
+    "samples": 64000,
+    "scenario_id": "zero_detector_delay",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\detector_delay_500ms.pcm",
+    "samples": 64000,
+    "scenario_id": "detector_delay_500ms",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\detector_delay_exceeds_ring.pcm",
+    "samples": 80000,
+    "scenario_id": "detector_delay_exceeds_ring",
+    "seed": 26172,
+    "sha256": "3a59a54be506171e68e08f7d59ec6b464feb17dfb616644f607537c2788c6507"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\acceptance_capacity_exact.pcm",
+    "samples": 64000,
+    "scenario_id": "acceptance_capacity_exact",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\acceptance_capacity_plus_one.pcm",
+    "samples": 64000,
+    "scenario_id": "acceptance_capacity_plus_one",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\slow_sink_overflow.pcm",
+    "samples": 112000,
+    "scenario_id": "slow_sink_overflow",
+    "seed": 26172,
+    "sha256": "761b34f53c7614305965ed5707297bc8de8def4b98aa6adce620cee9aa1442fd"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\one_dropped_packet.pcm",
+    "samples": 64000,
+    "scenario_id": "one_dropped_packet",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\duplicate_packets.pcm",
+    "samples": 64000,
+    "scenario_id": "duplicate_packets",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\all_packets_dropped.pcm",
+    "samples": 64000,
+    "scenario_id": "all_packets_dropped",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\disconnect_aborts.pcm",
+    "samples": 64000,
+    "scenario_id": "disconnect_aborts",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\reconnect_session_isolation.pcm",
+    "samples": 64000,
+    "scenario_id": "reconnect_session_isolation",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\repeated_and_busy_triggers.pcm",
+    "samples": 64000,
+    "scenario_id": "repeated_and_busy_triggers",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\stale_trigger.pcm",
+    "samples": 64000,
+    "scenario_id": "stale_trigger",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\future_trigger.pcm",
+    "samples": 64000,
+    "scenario_id": "future_trigger",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\mute_during_capture.pcm",
+    "samples": 64000,
+    "scenario_id": "mute_during_capture",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\mute_then_fresh_session.pcm",
+    "samples": 80000,
+    "scenario_id": "mute_then_fresh_session",
+    "seed": 26172,
+    "sha256": "3a59a54be506171e68e08f7d59ec6b464feb17dfb616644f607537c2788c6507"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\long_idle_ring_wrap.pcm",
+    "samples": 112000,
+    "scenario_id": "long_idle_ring_wrap",
+    "seed": 26172,
+    "sha256": "761b34f53c7614305965ed5707297bc8de8def4b98aa6adce620cee9aa1442fd"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\corrupted_packet.pcm",
+    "samples": 64000,
+    "scenario_id": "corrupted_packet",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\reordered_metadata.pcm",
+    "samples": 64000,
+    "scenario_id": "reordered_metadata",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\insufficient_startup_history.pcm",
+    "samples": 40800,
+    "scenario_id": "insufficient_startup_history",
+    "seed": 26172,
+    "sha256": "e1dd44a8b4f98e0470f0ea1f5f4d48be4d6d53cca22b223d725c488eafa94281"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\acceptance_timeout.pcm",
+    "samples": 64000,
+    "scenario_id": "acceptance_timeout",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\irregular_packet_sizes.pcm",
+    "samples": 64000,
+    "scenario_id": "irregular_packet_sizes",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\post_endpoint_slow_drain.pcm",
+    "samples": 52000,
+    "scenario_id": "post_endpoint_slow_drain",
+    "seed": 26172,
+    "sha256": "68ecea7e48d6697bb4a824cee099ce10b3b8b710a1b696c9158f2a83472efe33"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\mute_while_waiting_acceptance.pcm",
+    "samples": 64000,
+    "scenario_id": "mute_while_waiting_acceptance",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\capacity_with_inflight_protection.pcm",
+    "samples": 64000,
+    "scenario_id": "capacity_with_inflight_protection",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  },
+  {
+    "consent": "no_human_recordings",
+    "kind": "synthetic_index_pattern_not_speech",
+    "license": "generated_for_this_validation",
+    "path": "fixtures\\old_trigger_after_unmute.pcm",
+    "samples": 64000,
+    "scenario_id": "old_trigger_after_unmute",
+    "seed": 26172,
+    "sha256": "61b579f43e7d494050d2403863fd818a3eddb6787db19b5350550de0762c329e"
+  }
+]

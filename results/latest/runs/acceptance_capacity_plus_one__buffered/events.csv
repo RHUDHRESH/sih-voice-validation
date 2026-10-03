@@ -1,0 +1,3 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,acceptance_capacity_plus_one:buffered:1,requested_start=14400; keyword_end=16000,simulated
+30401,ABORT,acceptance_capacity_plus_one:buffered:1,BUFFER_OVERFLOW_PENDING,simulated

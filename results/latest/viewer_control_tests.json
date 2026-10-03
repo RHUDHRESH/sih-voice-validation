@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "scope": "isolated DOM/control logic; not a browser rendering test",
+  "node": "v24.19.0",
+  "checks": [
+    {
+      "check": "loads all recorded scenarios and synthetic label data",
+      "status": "pass"
+    },
+    {
+      "check": "golden final contrasts actual recorded command integrity",
+      "status": "pass"
+    },
+    {
+      "check": "restart and next-event use the same source clock",
+      "status": "pass"
+    },
+    {
+      "check": "scrub updates panels and pauses playback",
+      "status": "pass"
+    },
+    {
+      "check": "play speed and pause advance deterministically in isolated clock",
+      "status": "pass"
+    },
+    {
+      "check": "overflow shows explicit abort rather than success",
+      "status": "pass"
+    },
+    {
+      "check": "multi-command resume does not erase prior command failure",
+      "status": "pass"
+    },
+    {
+      "check": "every scenario final verdict matches artifact aggregate",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "evidence_label": "host-measured-test-execution",
+  "host_runtime_seconds": 9.534904300002381,
+  "paired_manifest_replays": 56,
+  "property_seeds": [
+    26172,
+    160289
+  ],
+  "random_capture_trials": 80,
+  "schema_version": "1.0",
+  "status": "pass",
+  "tests": [
+    {
+      "status": "pass",
+      "test": "test_artifact_audit.ArtifactAuditTests.test_corrupt_serialized_pcm_rejected"
+    },
+    {
+      "status": "pass",
+      "test": "test_artifact_audit.ArtifactAuditTests.test_duplicate_scenario_policy_key_rejected"
+    },
+    {
+      "status": "pass",
+      "test": "test_artifact_audit.ArtifactAuditTests.test_independent_golden_audit"
+    },
+    {
+      "status": "pass",
+      "test": "test_artifact_audit.ArtifactAuditTests.test_per_run_result_must_match_summary"
+    },
+    {
+      "status": "pass",
+      "test": "test_artifact_audit.ArtifactAuditTests.test_summary_cannot_redefine_ground_truth"
+    },
+    {
+      "status": "pass",
+      "test": "test_evidence_package.EvidencePackageTests.test_archive_path_escape_is_rejected"
+    },
+    {
+      "status": "pass",
+      "test": "test_evidence_package.EvidencePackageTests.test_corrupted_blob_is_rejected"
+    },
+    {
+      "status": "pass",
+      "test": "test_evidence_package.EvidencePackageTests.test_deduplication_and_fresh_release_restore"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_all_scenario_outcomes_and_invariants"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_capacity_boundary_then_one_sample_failure"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_continuous_acquisition_after_endpoint"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_empty_receiver_is_not_onset_retention"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_golden_exact_3200_vs_zero_and_paired_pcm"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_inflight_packet_protects_overwritten_ring_prefix"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_manifest_matches_generator"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_mute_before_acceptance"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_mute_no_new_capture_or_send_and_fresh_session"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_packet_boundaries_do_not_change_capture_range"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_pcm_period_and_seed_reproducibility"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_pre_reset_trigger_cannot_reactivate_capture"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_repeated_stale_and_future_triggers"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_retries_duplicates_and_reconnect"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.CaptureTests.test_seeded_random_capture_properties"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.ReceiverTests.test_conflicting_duplicate_true_sequence_gap_and_timing"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.ReceiverTests.test_duplicate_gap_corruption_and_closed_session"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.ReceiverTests.test_incomplete_receiver_cannot_claim_completion"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.RingTests.test_every_wrap_offset_and_random_windows"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.RingTests.test_exact_capacity_and_no_clamping"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.RingTests.test_fixed_storage_and_secure_clear"
+    },
+    {
+      "status": "pass",
+      "test": "test_harness.RingTests.test_noncontiguous_source_rejected"
+    }
+  ],
+  "tests_run": 30
+}

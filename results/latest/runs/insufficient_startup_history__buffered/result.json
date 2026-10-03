@@ -1,0 +1,66 @@
+{
+  "closed_session_packets_rejected": 0,
+  "command_integrity_status": "fail",
+  "commands": [
+    {
+      "command_integrity_status": "fail",
+      "command_samples": 8000,
+      "command_samples_missing": 8000,
+      "command_samples_received": 0,
+      "ground_truth_end": 8800,
+      "ground_truth_start": 800,
+      "onset_lost_ms": 500.0,
+      "onset_lost_samples": 8000,
+      "onset_retained": false,
+      "received_end": null,
+      "received_start": null,
+      "receiver_bytes_match_source": false,
+      "selected_session_id": "insufficient_startup_history:buffered:1",
+      "utterance_id": "command_1"
+    }
+  ],
+  "configured_packet_payload_bound_bytes": 640,
+  "detector": "oracle_events_no_kws_model",
+  "duplicate_packets_ignored": 0,
+  "endpoint": "oracle_endpoint_no_vad",
+  "evidence_label": "simulated",
+  "expected_behavior_checks": [
+    {
+      "actual": "aborted",
+      "expected": "aborted",
+      "field": "handoff_status",
+      "status": "pass"
+    }
+  ],
+  "handoff_status": "aborted",
+  "host_runtime_seconds": 0.03223159990739077,
+  "input_sha256": "e1dd44a8b4f98e0470f0ea1f5f4d48be4d6d53cca22b223d725c488eafa94281",
+  "maximum_packet_payload_bytes": 0,
+  "mute_clear_verified": true,
+  "policy": "buffered",
+  "reason": "CAPTURE_START_NOT_RETAINED",
+  "receiver_accepted_samples": 0,
+  "ring_capacity_samples": 16000,
+  "ring_high_water_samples": 8800,
+  "ring_pcm_payload_bytes": 32000,
+  "scenario_id": "insufficient_startup_history",
+  "session_count": 1,
+  "sessions": [
+    {
+      "accepted_at": null,
+      "capture_end": null,
+      "cursor": -800,
+      "finished_at": 1200,
+      "next_send_at": 0,
+      "reason": "CAPTURE_START_NOT_RETAINED",
+      "requested_at": 1200,
+      "requested_start": -800,
+      "seq": 0,
+      "session_id": "insufficient_startup_history:buffered:1",
+      "state": "ABORTED",
+      "utterance_id": "command_1"
+    }
+  ],
+  "test_status": "pass",
+  "wire_samples_including_retries": 0
+}

@@ -1,0 +1,8 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,reordered_metadata:buffered:1,requested_start=14400; keyword_end=16000,simulated
+19200,ACCEPT,reordered_metadata:buffered:1,start=14400,simulated
+19200,SEND,reordered_metadata:buffered:1,seq=0; start=14400; count=320,simulated
+19201,PACKET_DELIVERY,reordered_metadata:buffered:1,ACCEPTED,simulated
+19360,SEND,reordered_metadata:buffered:1,seq=1; start=14720; count=320,simulated
+19361,PACKET_DELIVERY,reordered_metadata:buffered:1,REJECT_NONCONTIGUOUS,simulated
+19361,ABORT,reordered_metadata:buffered:1,REJECT_NONCONTIGUOUS,simulated

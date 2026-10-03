@@ -1,0 +1,85 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,acceptance_capacity_exact:naive:1,requested_start=19200; keyword_end=16000,simulated
+30400,ACCEPT,acceptance_capacity_exact:naive:1,start=19200,simulated
+30400,SEND,acceptance_capacity_exact:naive:1,seq=0; start=19200; count=320,simulated
+30401,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+30560,SEND,acceptance_capacity_exact:naive:1,seq=1; start=19520; count=320,simulated
+30561,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+30720,SEND,acceptance_capacity_exact:naive:1,seq=2; start=19840; count=320,simulated
+30721,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+30880,SEND,acceptance_capacity_exact:naive:1,seq=3; start=20160; count=320,simulated
+30881,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+31040,SEND,acceptance_capacity_exact:naive:1,seq=4; start=20480; count=320,simulated
+31041,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+31200,SEND,acceptance_capacity_exact:naive:1,seq=5; start=20800; count=320,simulated
+31201,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+31360,SEND,acceptance_capacity_exact:naive:1,seq=6; start=21120; count=320,simulated
+31361,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+31520,SEND,acceptance_capacity_exact:naive:1,seq=7; start=21440; count=320,simulated
+31521,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+31680,SEND,acceptance_capacity_exact:naive:1,seq=8; start=21760; count=320,simulated
+31681,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+31840,SEND,acceptance_capacity_exact:naive:1,seq=9; start=22080; count=320,simulated
+31841,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+32000,ORACLE_ENDPOINT,acceptance_capacity_exact:naive:1,capture_end=32000,simulated
+32000,SEND,acceptance_capacity_exact:naive:1,seq=10; start=22400; count=320,simulated
+32001,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+32160,SEND,acceptance_capacity_exact:naive:1,seq=11; start=22720; count=320,simulated
+32161,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+32320,SEND,acceptance_capacity_exact:naive:1,seq=12; start=23040; count=320,simulated
+32321,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+32480,SEND,acceptance_capacity_exact:naive:1,seq=13; start=23360; count=320,simulated
+32481,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+32640,SEND,acceptance_capacity_exact:naive:1,seq=14; start=23680; count=320,simulated
+32641,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+32800,SEND,acceptance_capacity_exact:naive:1,seq=15; start=24000; count=320,simulated
+32801,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+32960,SEND,acceptance_capacity_exact:naive:1,seq=16; start=24320; count=320,simulated
+32961,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+33120,SEND,acceptance_capacity_exact:naive:1,seq=17; start=24640; count=320,simulated
+33121,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+33280,SEND,acceptance_capacity_exact:naive:1,seq=18; start=24960; count=320,simulated
+33281,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+33440,SEND,acceptance_capacity_exact:naive:1,seq=19; start=25280; count=320,simulated
+33441,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+33600,SEND,acceptance_capacity_exact:naive:1,seq=20; start=25600; count=320,simulated
+33601,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+33760,SEND,acceptance_capacity_exact:naive:1,seq=21; start=25920; count=320,simulated
+33761,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+33920,SEND,acceptance_capacity_exact:naive:1,seq=22; start=26240; count=320,simulated
+33921,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+34080,SEND,acceptance_capacity_exact:naive:1,seq=23; start=26560; count=320,simulated
+34081,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+34240,SEND,acceptance_capacity_exact:naive:1,seq=24; start=26880; count=320,simulated
+34241,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+34400,SEND,acceptance_capacity_exact:naive:1,seq=25; start=27200; count=320,simulated
+34401,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+34560,SEND,acceptance_capacity_exact:naive:1,seq=26; start=27520; count=320,simulated
+34561,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+34720,SEND,acceptance_capacity_exact:naive:1,seq=27; start=27840; count=320,simulated
+34721,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+34880,SEND,acceptance_capacity_exact:naive:1,seq=28; start=28160; count=320,simulated
+34881,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+35040,SEND,acceptance_capacity_exact:naive:1,seq=29; start=28480; count=320,simulated
+35041,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+35200,SEND,acceptance_capacity_exact:naive:1,seq=30; start=28800; count=320,simulated
+35201,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+35360,SEND,acceptance_capacity_exact:naive:1,seq=31; start=29120; count=320,simulated
+35361,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+35520,SEND,acceptance_capacity_exact:naive:1,seq=32; start=29440; count=320,simulated
+35521,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+35680,SEND,acceptance_capacity_exact:naive:1,seq=33; start=29760; count=320,simulated
+35681,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+35840,SEND,acceptance_capacity_exact:naive:1,seq=34; start=30080; count=320,simulated
+35841,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+36000,SEND,acceptance_capacity_exact:naive:1,seq=35; start=30400; count=320,simulated
+36001,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+36160,SEND,acceptance_capacity_exact:naive:1,seq=36; start=30720; count=320,simulated
+36161,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+36320,SEND,acceptance_capacity_exact:naive:1,seq=37; start=31040; count=320,simulated
+36321,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+36480,SEND,acceptance_capacity_exact:naive:1,seq=38; start=31360; count=320,simulated
+36481,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+36640,SEND,acceptance_capacity_exact:naive:1,seq=39; start=31680; count=320,simulated
+36641,PACKET_DELIVERY,acceptance_capacity_exact:naive:1,ACCEPTED,simulated
+36641,COMPLETE,acceptance_capacity_exact:naive:1,end=32000,simulated

@@ -1,0 +1,9 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,old_trigger_after_unmute:naive:1,requested_start=19200; keyword_end=16000,simulated
+19200,ACCEPT,old_trigger_after_unmute:naive:1,start=19200,simulated
+19201,SEND,old_trigger_after_unmute:naive:1,seq=0; start=19200; count=1,simulated
+19202,PACKET_DELIVERY,old_trigger_after_unmute:naive:1,ACCEPTED,simulated
+19360,ABORT,old_trigger_after_unmute:naive:1,MUTED,simulated
+19360,MUTE,,ring zeroed; capture session cancelled,simulated
+20000,UNMUTE,,ring zeroed; capture session cancelled,simulated
+20160,TRIGGER_REJECTED,,PRE_RESET_EVENT,simulated

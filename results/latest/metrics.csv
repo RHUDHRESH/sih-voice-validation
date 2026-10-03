@@ -1,0 +1,59 @@
+scenario_id,policy,utterance_id,metric,numerator,denominator,unit,estimate,confidence_interval_low,confidence_interval_high,confidence_interval_reason,status,reason,evidence_label
+golden_no_pause,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+golden_no_pause,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+pause_300ms,naive,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+pause_300ms,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+zero_detector_delay,naive,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+zero_detector_delay,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+detector_delay_500ms,naive,command_1,command_sample_retention_fraction,8000,16000,fraction,0.5,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+detector_delay_500ms,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+detector_delay_exceeds_ring,naive,command_1,command_sample_retention_fraction,16000,32000,fraction,0.5,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+detector_delay_exceeds_ring,buffered,command_1,command_sample_retention_fraction,0,32000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,CAPTURE_START_NOT_RETAINED,simulated
+acceptance_capacity_exact,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+acceptance_capacity_exact,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+acceptance_capacity_plus_one,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+acceptance_capacity_plus_one,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,BUFFER_OVERFLOW_PENDING,simulated
+slow_sink_overflow,naive,command_1,command_sample_retention_fraction,15841,64000,fraction,0.247515625,,,exact deterministic fixture count; not a population estimate,fail,BUFFER_OVERFLOW_STREAMING,simulated
+slow_sink_overflow,buffered,command_1,command_sample_retention_fraction,9760,64000,fraction,0.1525,,,exact deterministic fixture count; not a population estimate,fail,BUFFER_OVERFLOW_STREAMING,simulated
+one_dropped_packet,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+one_dropped_packet,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+duplicate_packets,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+duplicate_packets,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+all_packets_dropped,naive,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,BUFFER_OVERFLOW_STREAMING,simulated
+all_packets_dropped,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,BUFFER_OVERFLOW_STREAMING,simulated
+disconnect_aborts,naive,command_1,command_sample_retention_fraction,1441,16000,fraction,0.0900625,,,exact deterministic fixture count; not a population estimate,fail,NETWORK_DISCONNECTED,simulated
+disconnect_aborts,buffered,command_1,command_sample_retention_fraction,1600,16000,fraction,0.1,,,exact deterministic fixture count; not a population estimate,fail,NETWORK_DISCONNECTED,simulated
+reconnect_session_isolation,naive,command_1,command_sample_retention_fraction,12160,16000,fraction,0.76,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+reconnect_session_isolation,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+repeated_and_busy_triggers,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+repeated_and_busy_triggers,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+stale_trigger,naive,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,NO_VALID_TRIGGER,simulated
+stale_trigger,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,NO_VALID_TRIGGER,simulated
+future_trigger,naive,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,NO_VALID_TRIGGER,simulated
+future_trigger,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,NO_VALID_TRIGGER,simulated
+mute_during_capture,naive,command_1,command_sample_retention_fraction,321,16000,fraction,0.0200625,,,exact deterministic fixture count; not a population estimate,fail,MUTED,simulated
+mute_during_capture,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,MUTED,simulated
+mute_then_fresh_session,naive,command_1,command_sample_retention_fraction,1441,16000,fraction,0.0900625,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+mute_then_fresh_session,naive,command_2,command_sample_retention_fraction,8000,9600,fraction,0.8333333333333334,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+mute_then_fresh_session,buffered,command_1,command_sample_retention_fraction,1600,16000,fraction,0.1,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+mute_then_fresh_session,buffered,command_2,command_sample_retention_fraction,9600,9600,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+long_idle_ring_wrap,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+long_idle_ring_wrap,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+corrupted_packet,naive,command_1,command_sample_retention_fraction,1,16000,fraction,6.25e-05,,,exact deterministic fixture count; not a population estimate,fail,REJECT_CHECKSUM_OR_LENGTH,simulated
+corrupted_packet,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,REJECT_CHECKSUM_OR_LENGTH,simulated
+reordered_metadata,naive,command_1,command_sample_retention_fraction,1,16000,fraction,6.25e-05,,,exact deterministic fixture count; not a population estimate,fail,REJECT_NONCONTIGUOUS,simulated
+reordered_metadata,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,REJECT_NONCONTIGUOUS,simulated
+insufficient_startup_history,naive,command_1,command_sample_retention_fraction,7600,8000,fraction,0.95,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+insufficient_startup_history,buffered,command_1,command_sample_retention_fraction,0,8000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,CAPTURE_START_NOT_RETAINED,simulated
+acceptance_timeout,naive,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,SIMULATION_TIMEOUT,simulated
+acceptance_timeout,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,SIMULATION_TIMEOUT,simulated
+irregular_packet_sizes,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+irregular_packet_sizes,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+post_endpoint_slow_drain,naive,command_1,command_sample_retention_fraction,800,4000,fraction,0.2,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+post_endpoint_slow_drain,buffered,command_1,command_sample_retention_fraction,0,4000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,BUFFER_OVERFLOW_STREAMING,simulated
+mute_while_waiting_acceptance,naive,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,MUTED,simulated
+mute_while_waiting_acceptance,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,MUTED,simulated
+capacity_with_inflight_protection,naive,command_1,command_sample_retention_fraction,12800,16000,fraction,0.8,,,exact deterministic fixture count; not a population estimate,fail,missing onset,simulated
+capacity_with_inflight_protection,buffered,command_1,command_sample_retention_fraction,16000,16000,fraction,1.0,,,exact deterministic fixture count; not a population estimate,pass,complete command,simulated
+old_trigger_after_unmute,naive,command_1,command_sample_retention_fraction,1,16000,fraction,6.25e-05,,,exact deterministic fixture count; not a population estimate,fail,MUTED,simulated
+old_trigger_after_unmute,buffered,command_1,command_sample_retention_fraction,0,16000,fraction,0.0,,,exact deterministic fixture count; not a population estimate,fail,MUTED,simulated

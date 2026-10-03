@@ -1,0 +1,88 @@
+{
+  "expectation_basis": "Fast clean sink: buffered D+G+A <= R; naive A <= R. Fault expectations predeclared.",
+  "groups": {
+    "boundary": {
+      "buffered": {
+        "command_integrity_pass": 24,
+        "failure_reasons": {
+          "BUFFER_OVERFLOW_PENDING": 12
+        },
+        "handoff_complete": 24,
+        "runs": 36
+      },
+      "naive": {
+        "command_integrity_pass": 9,
+        "failure_reasons": {},
+        "handoff_complete": 36,
+        "runs": 36
+      }
+    },
+    "fault": {
+      "buffered": {
+        "command_integrity_pass": 50,
+        "failure_reasons": {
+          "BUFFER_OVERFLOW_STREAMING": 50,
+          "MUTED": 25,
+          "REJECT_CHECKSUM_OR_LENGTH": 25,
+          "REJECT_NONCONTIGUOUS": 25
+        },
+        "handoff_complete": 50,
+        "runs": 175
+      },
+      "naive": {
+        "command_integrity_pass": 0,
+        "failure_reasons": {
+          "BUFFER_OVERFLOW_STREAMING": 50,
+          "MUTED": 25,
+          "REJECT_CHECKSUM_OR_LENGTH": 25,
+          "REJECT_NONCONTIGUOUS": 25
+        },
+        "handoff_complete": 50,
+        "runs": 175
+      }
+    },
+    "grid": {
+      "buffered": {
+        "command_integrity_pass": 139,
+        "failure_reasons": {
+          "BUFFER_OVERFLOW_PENDING": 59,
+          "CAPTURE_START_NOT_RETAINED": 42
+        },
+        "handoff_complete": 139,
+        "runs": 240
+      },
+      "naive": {
+        "command_integrity_pass": 38,
+        "failure_reasons": {
+          "BUFFER_OVERFLOW_PENDING": 50
+        },
+        "handoff_complete": 190,
+        "runs": 240
+      }
+    },
+    "random": {
+      "buffered": {
+        "command_integrity_pass": 154,
+        "failure_reasons": {
+          "BUFFER_OVERFLOW_PENDING": 55,
+          "CAPTURE_START_NOT_RETAINED": 41
+        },
+        "handoff_complete": 154,
+        "runs": 250
+      },
+      "naive": {
+        "command_integrity_pass": 0,
+        "failure_reasons": {
+          "BUFFER_OVERFLOW_PENDING": 26
+        },
+        "handoff_complete": 224,
+        "runs": 250
+      }
+    }
+  },
+  "paired_replays": 1402,
+  "scenario_count": 701,
+  "scope": "Synthetic indexed PCM; oracle triggers/endpoints; exploratory distribution; no speech/hardware accuracy claim",
+  "seed": 2617203,
+  "status": "pass"
+}

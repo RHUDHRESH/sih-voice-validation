@@ -1,0 +1,66 @@
+{
+  "closed_session_packets_rejected": 0,
+  "command_integrity_status": "fail",
+  "commands": [
+    {
+      "command_integrity_status": "fail",
+      "command_samples": 64000,
+      "command_samples_missing": 48159,
+      "command_samples_received": 15841,
+      "ground_truth_end": 80000,
+      "ground_truth_start": 16000,
+      "onset_lost_ms": 200.0,
+      "onset_lost_samples": 3200,
+      "onset_retained": false,
+      "received_end": 35041,
+      "received_start": 19200,
+      "receiver_bytes_match_source": true,
+      "selected_session_id": "slow_sink_overflow:naive:1",
+      "utterance_id": "command_1"
+    }
+  ],
+  "configured_packet_payload_bound_bytes": 320,
+  "detector": "oracle_events_no_kws_model",
+  "duplicate_packets_ignored": 0,
+  "endpoint": "oracle_endpoint_no_vad",
+  "evidence_label": "simulated",
+  "expected_behavior_checks": [
+    {
+      "actual": "aborted",
+      "expected": "aborted",
+      "field": "handoff_status",
+      "status": "pass"
+    }
+  ],
+  "handoff_status": "aborted",
+  "host_runtime_seconds": 0.24118209991138428,
+  "input_sha256": "761b34f53c7614305965ed5707297bc8de8def4b98aa6adce620cee9aa1442fd",
+  "maximum_packet_payload_bytes": 320,
+  "mute_clear_verified": true,
+  "policy": "naive",
+  "reason": "BUFFER_OVERFLOW_STREAMING",
+  "receiver_accepted_samples": 15841,
+  "ring_capacity_samples": 16000,
+  "ring_high_water_samples": 16000,
+  "ring_pcm_payload_bytes": 32000,
+  "scenario_id": "slow_sink_overflow",
+  "session_count": 1,
+  "sessions": [
+    {
+      "accepted_at": 19200,
+      "capture_end": null,
+      "cursor": 35041,
+      "finished_at": 51042,
+      "next_send_at": 51201,
+      "reason": "BUFFER_OVERFLOW_STREAMING",
+      "requested_at": 19200,
+      "requested_start": 19200,
+      "seq": 100,
+      "session_id": "slow_sink_overflow:naive:1",
+      "state": "ABORTED",
+      "utterance_id": "command_1"
+    }
+  ],
+  "test_status": "pass",
+  "wire_samples_including_retries": 15841
+}

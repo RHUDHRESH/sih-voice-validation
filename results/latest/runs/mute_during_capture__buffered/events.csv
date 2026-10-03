@@ -1,0 +1,11 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,mute_during_capture:buffered:1,requested_start=14400; keyword_end=16000,simulated
+19200,ACCEPT,mute_during_capture:buffered:1,start=14400,simulated
+19200,SEND,mute_during_capture:buffered:1,seq=0; start=14400; count=320,simulated
+19600,PACKET_DELIVERY,mute_during_capture:buffered:1,ACCEPTED,simulated
+19600,SEND,mute_during_capture:buffered:1,seq=1; start=14720; count=320,simulated
+20000,PACKET_DELIVERY,mute_during_capture:buffered:1,ACCEPTED,simulated
+20000,SEND,mute_during_capture:buffered:1,seq=2; start=15040; count=320,simulated
+20160,ABORT,mute_during_capture:buffered:1,MUTED,simulated
+20160,MUTE,,ring zeroed; capture session cancelled,simulated
+20400,PACKET_DELIVERY,mute_during_capture:buffered:1,REJECT_CLOSED_SESSION,simulated

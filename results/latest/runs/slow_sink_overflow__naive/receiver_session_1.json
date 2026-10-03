@@ -1,0 +1,11 @@
+{
+  "completed_end": null,
+  "declared_start": 19200,
+  "evidence_label": "simulated",
+  "format": "s16le_mono_16000Hz",
+  "pcm_sha256": "c406d7b0b28ab5d73c77ad92533d22871cd84be94c7f61c5c7c133bad22bd785",
+  "received_end": 35041,
+  "sample_count": 15841,
+  "session_id": "slow_sink_overflow:naive:1",
+  "state": "ABORTED"
+}

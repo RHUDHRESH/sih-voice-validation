@@ -1,0 +1,21 @@
+at_sample,event,session_id,detail,evidence_label
+19200,ORACLE_TRIGGER,post_endpoint_slow_drain:buffered:1,requested_start=14400; keyword_end=16000,simulated
+19200,ACCEPT,post_endpoint_slow_drain:buffered:1,start=14400,simulated
+19200,SEND,post_endpoint_slow_drain:buffered:1,seq=0; start=14400; count=160,simulated
+19201,PACKET_DELIVERY,post_endpoint_slow_drain:buffered:1,ACCEPTED,simulated
+20000,ORACLE_ENDPOINT,post_endpoint_slow_drain:buffered:1,capture_end=20000,simulated
+20800,SEND,post_endpoint_slow_drain:buffered:1,seq=1; start=14560; count=160,simulated
+20801,PACKET_DELIVERY,post_endpoint_slow_drain:buffered:1,ACCEPTED,simulated
+22400,SEND,post_endpoint_slow_drain:buffered:1,seq=2; start=14720; count=160,simulated
+22401,PACKET_DELIVERY,post_endpoint_slow_drain:buffered:1,ACCEPTED,simulated
+24000,SEND,post_endpoint_slow_drain:buffered:1,seq=3; start=14880; count=160,simulated
+24001,PACKET_DELIVERY,post_endpoint_slow_drain:buffered:1,ACCEPTED,simulated
+25600,SEND,post_endpoint_slow_drain:buffered:1,seq=4; start=15040; count=160,simulated
+25601,PACKET_DELIVERY,post_endpoint_slow_drain:buffered:1,ACCEPTED,simulated
+27200,SEND,post_endpoint_slow_drain:buffered:1,seq=5; start=15200; count=160,simulated
+27201,PACKET_DELIVERY,post_endpoint_slow_drain:buffered:1,ACCEPTED,simulated
+28800,SEND,post_endpoint_slow_drain:buffered:1,seq=6; start=15360; count=160,simulated
+28801,PACKET_DELIVERY,post_endpoint_slow_drain:buffered:1,ACCEPTED,simulated
+30400,SEND,post_endpoint_slow_drain:buffered:1,seq=7; start=15520; count=160,simulated
+30401,PACKET_DELIVERY,post_endpoint_slow_drain:buffered:1,ACCEPTED,simulated
+31681,ABORT,post_endpoint_slow_drain:buffered:1,BUFFER_OVERFLOW_STREAMING,simulated
